@@ -1,4 +1,12 @@
 # MiTienda
+## Creaciòn de una tienda virtual con angular (Frontend)
+# Angular Componentes y Servicios
+## Curso de Platzi 
+https://platzi.com/clases/2486-angular-componentes/41176-que-son-los-componentes/
+
+git 
+
+ttps://github.com/platzi/angular-componentes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 

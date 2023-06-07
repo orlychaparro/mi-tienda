@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   imgParent = '';
   // https://www.w3schools.com/howto/img_avatar.png
+
+  onLoaded(img:string){
+    console.log('log padre', img);
+  }
+
 }

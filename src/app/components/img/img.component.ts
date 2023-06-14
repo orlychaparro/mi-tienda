@@ -21,9 +21,9 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   @Output() loaded = new EventEmitter<string>();
   imageDefault = './assets/images/default.png';
   img_notfound= './assets/images/img_notfound.jpg'
-  counter = 0;
+  /* counter = 0;
   counterFn : number | undefined;
-
+ */
 
    /*
    Ciclo :
@@ -58,10 +58,10 @@ NgOnDestroy: Corre cuando se elimina el componente.
     // Solo corre una vez, cuando se inicializa el componente
       console.log('ngOnInit', 'imgValue =>', this.img);
 
-      this.counterFn = window.setInterval(() =>{
+     /*  this.counterFn = window.setInterval(() =>{
         this.counter +=1;
         console.log('run counter');
-      }, 1000);
+      }, 1000); */
 
 
   }
@@ -79,7 +79,7 @@ NgOnDestroy: Corre cuando se elimina el componente.
     // delete - solo Cuando se elimina el componente
     //
     console.log('ngOnDestroy');
-    window.clearInterval(this.counterFn);
+    /* window.clearInterval(this.counterFn); */
 
   }
 

@@ -9,6 +9,7 @@ import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 })
 export class AppComponent {
   imgParent = '';   // https://www.w3schools.com/howto/img_avatar.png
+  showImg = true;
   products : Product[] =
     [
       {
@@ -40,6 +41,11 @@ export class AppComponent {
 
   onLoaded(img:string){
     console.log('log padre', img);
+  }
+
+  toggleImg(){
+    this.showImg = !this.showImg;
+
   }
 
 }

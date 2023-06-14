@@ -8,10 +8,22 @@ import { NgControlStatusGroup } from '@angular/forms';
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy{
 
-  @Input() img: string = '';
+  img: string = '';
+
+  @Input('img')
+  set changeImg(newImg : string) {
+    this.img = newImg;
+    console.log('change solo img => ',this.img);
+    // aca se puede ajeutar codigo qu se ejecuta si y silo si cambia img
+  }
+
+  @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
   imageDefault = './assets/images/default.png';
   img_notfound= './assets/images/img_notfound.jpg'
+  counter = 0;
+  counterFn : number | undefined;
+
 
    /*
    Ciclo :
@@ -36,6 +48,7 @@ NgOnDestroy: Corre cuando se elimina el componente.
   // que se actualize el valor del input.
   ngOnChanges(changes: SimpleChanges): void {
       console.log('ngOnChanges', 'imgValue =>', this.img);
+      console.log('changes', changes);
 
   }
 
@@ -44,6 +57,11 @@ NgOnDestroy: Corre cuando se elimina el componente.
     // Se puede usar para metodos Asyn como fetch
     // Solo corre una vez, cuando se inicializa el componente
       console.log('ngOnInit', 'imgValue =>', this.img);
+
+      this.counterFn = window.setInterval(() =>{
+        this.counter +=1;
+        console.log('run counter');
+      }, 1000);
 
 
   }
@@ -61,6 +79,7 @@ NgOnDestroy: Corre cuando se elimina el componente.
     // delete - solo Cuando se elimina el componente
     //
     console.log('ngOnDestroy');
+    window.clearInterval(this.counterFn);
 
   }
 

@@ -1,36 +1,21 @@
 <p>
-  La cantidad {{ myShoppingCart.length}}
-  </p>
-  <p>
-    Total : ${{total}}
-  </p>
-  <p>
-    Today: {{ today | date: 'short'}}
-
-  </p>
-
-  <p>
-    Today: {{ today | timeAgo}}
-
-  </p>
-
-  <p>
-
-    Otra fecha: {{ date | date: 'full'}}
-  </p>
-
-  <p>
-
-    Otra fecha: {{ date | timeAgo}}
-  </p>
-
-  <p>
-    {{ 'hOLa BasCCASas asASA' | uppercase}}
-  </p>
-  <p>
-    Vocal to Number = {{'VOocAal to Number' | vocaltoNumber}}
-  </p>
-
+  La cantidad {{ myShoppingCart.length }}
+</p>
+<p>
+  Total: ${{ total }}
+</p>
+<p>
+  Today: {{ today | date:'short' }}
+</p>
+<p>
+  Today: {{ today | timeAgo }}
+</p>
+<p>
+  Otra fecha: {{ date | date:'yyyy...dd...MM' }}
+</p>
+<p>
+  {{ 'hOLA BasCVASas asASA' | uppercase }}
+</p>
 <div class="products--grid">
   <app-product
     [product]="product"
